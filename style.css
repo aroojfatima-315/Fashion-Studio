@@ -1,0 +1,404 @@
+ body{
+    background:red;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f9f3ef;
+  color: #2b1a1d;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background: transparent;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+nav a.active {
+  color: #6d0f24;
+  border-bottom: 2px solid #6d0f24;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 8% 20px;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 500px;
+}
+
+.tagline {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: #6d0f24;
+}
+
+.hero-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  line-height: 1.1;
+  margin: 15px 0 20px;
+}
+
+.hero-text p {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  padding: 14px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn.primary {
+  background: #6d0f24;
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background: #8a1430;
+}
+
+.btn.secondary {
+  border: 2px solid #6d0f24;
+  color: #6d0f24;
+}
+
+.btn.secondary:hover {
+  background: #6d0f24;
+  color: #fff;
+}
+
+.hero-image {
+  flex: 1;
+  text-align: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 30px;
+}
+
+.features {
+  background: #5b0f1d;
+  color: #fff;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  padding: 40px 8%;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  margin-top: 30px;
+}
+
+.feature h3 {
+  margin-bottom: 10px;
+}
+
+.feature p {
+  color: #f3dede;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}.collections-page {
+  padding: 60px 8%;
+  text-align: center;
+}
+
+.collections-page h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #2b1a1d;
+  margin-bottom: 10px;
+}
+
+.collections-page p {
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.collection-card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.collection-card:hover {
+  transform: translateY(-8px);
+}
+
+.collection-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+.collection-card h3 {
+  margin: 15px 0 10px;
+  color: #6d0f24;
+}
+
+.collection-card p {
+  padding: 0 20px 20px;
+  color: #555;
+}
+@media (max-width: 768px) {
+
+     .hero {
+
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero-image img {
+        width: 90%;
+        max-width: 350px;
+    }
+    }
+
+.designer-hero{
+    text-align:center;
+    padding:80px 10% 40px;
+}
+
+.designer-hero h1{
+    font-size:48px;
+    color:#6d0f24;
+    margin-bottom:15px;
+    font-family:'Playfair Display', serif;
+}
+
+.designer-hero p{
+    color:#555;
+    font-size:18px;
+}
+
+.designer-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+    padding:20px 8% 80px;
+}
+
+.designer-card{
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    text-align:center;
+    transition:transform 0.3s ease;
+    cursor:pointer;
+}
+.designer-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 30px rgba(0,0,0,0.2);
+    
+}
+.designer-card img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+}
+
+.designer-card h3{
+    margin:15px 0 10px;
+}
+
+
+.designer-card p{
+    padding:0 15px 15px;
+}
+
+.btn{
+    display:inline-block;
+    background:#b68b5d;
+    color:white;
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+    margin:20px 0;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#8b6a45;
+    transform:scale(1.05);
+}
+
+.about{
+    text-align:center;
+    padding:80px 10%;
+}
+
+.about h1{
+    font-size:45px;
+    margin-bottom:20px;
+}
+
+.about p{
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+    color:#555;
+}.about{
+    padding:80px 8%;
+}
+
+.about-content{
+    display:flex;
+    align-items:center;
+    gap:50px;
+}
+
+.about-text{
+    flex:1;
+}
+
+.about-text h1{
+    font-size:45px;
+    color:#6d0f24;
+    margin-bottom:20px;
+}
+
+.about-text p{
+    line-height:1.8;
+    color:#555;
+    margin-bottom:30px;
+}
+
+.about-image{
+    flex:1;
+}
+
+.about-image img{
+    width:100%;
+    border-radius:20px;
+}
+
+.about-boxes{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.box{
+    background:#fff;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    text-align:center;
+}.contact{
+    padding:80px 10%;
+    text-align:center;
+}
+
+.contact h1{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.contact p{
+    color:#555;
+    margin-bottom:30px;
+}
+
+.contact-form{
+    max-width:600px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    padding:15px;
+    border:1px solid #ccc;
+    border-radius:12px;
+    font-size:16px;
+    outline:none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    border-color:#6d0f24;
+}
+
+.contact-form button{
+    width:200px;
+    margin:auto;
+}
