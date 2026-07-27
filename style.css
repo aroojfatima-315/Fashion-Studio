@@ -456,4 +456,12 @@ nav a.active {
 
 .designer-card:hover img{
     transform: scale(1.08);
+}.top-bar {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 500;
 }
