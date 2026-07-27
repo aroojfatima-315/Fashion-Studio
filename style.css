@@ -501,4 +501,95 @@ nav a.active {
 .category-card h3{
     margin-top:15px;
     font-size:24px;
+}.logo{
+    text-decoration: none;
+    color: #222;
+    font-size: 38px;
+    font-weight: bold;
+    font-family: "Playfair Display", serif;
+}
+
+.logo:hover{
+    color: #8b3a62;
+}.new-arrivals{
+    padding:80px 10%;
+    text-align:center;
+}
+
+.new-arrivals h2{
+    font-size:40px;
+    margin-bottom:40px;
+    font-family: "Playfair Display", serif;
+}
+
+.arrival-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.arrival-card{
+    background:#fff;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    transition:0.3s;
+    padding-bottom:20px;
+}
+
+.arrival-card:hover{
+    transform:translateY(-8px);
+}
+
+.arrival-card img{
+    width:100%;
+    height:400px;
+    object-fit:cover;
+}
+
+.arrival-card h3{
+    margin:15px 0 10px;
+    font-size:24px;
+}
+
+.arrival-card p{
+    font-size:18px;
+    color:#8b3a62;
+    font-weight:bold;
+    margin-bottom:20px;
+}.featured{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:50px;
+    padding:80px 10%;
+    background:#faf7f8;
+}
+
+.featured-text{
+    flex:1;
+}
+
+.featured-text h2{
+    font-size:42px;
+    margin-bottom:20px;
+    font-family:"Playfair Display", serif;
+}
+
+.featured-text p{
+    font-size:18px;
+    line-height:1.8;
+    color:#555;
+    margin-bottom:30px;
+}
+
+.featured-image{
+    flex:1;
+}
+
+.featured-image img{
+    width:100%;
+    border-radius:20px;
+    object-fit:cover;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
