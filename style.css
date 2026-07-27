@@ -437,20 +437,5 @@ nav a.active {
     padding: 0 15px 20px;
     color: #666;
     line-height: 1.6;
-}.footer{
-    background:#222;
-    color:white;
-    text-align:center;
-    padding:20px;
-    margin-top:40px;
-}
 
-.footer a{
-    color:white;
-    text-decoration:none;
-    margin:0 10px;
-}
-
-.footer a:hover{
-    text-decoration:underline;
 }
