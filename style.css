@@ -513,11 +513,13 @@ nav a.active {
 
 .hero-image {
     flex: 1;
-    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .hero-image img {
-    width: 100%;
+   max-width: 100%;
     max-width: 550px;
     border-radius: 20px;
 }
