@@ -149,8 +149,10 @@ nav a.active {
   }
 
   .hero-buttons {
-    justify-content: center;
-    flex-wrap: wrap;
+    display: flex;
+    gap: 15px;
+    align-self: center;
+    flex-wrap: nowrap;
   }
 }.collections-page {
   padding: 60px 8%;
