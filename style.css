@@ -515,11 +515,11 @@ nav a.active {
     flex: 1;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .hero-image img {
     width: 100%;
     max-width: 550px;
     border-radius: 20px;
-    display: block;
 }
