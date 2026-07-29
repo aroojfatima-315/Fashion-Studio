@@ -1,99 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Designer Details</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .details-page {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 50px;
-            padding: 80px 10%;
-        }
-        .details-page img {
-            width: 420px;
-            height: 520px;
-            object-fit: cover;
-            border-radius: 15px;
-        }
-        .details-text {
-            max-width: 450px;
-        }
-        .details-text h1 {
-            font-size: 40px;
-            margin-bottom: 20px;
-        }
-        .details-text p {
-            font-size: 18px;
-            line-height: 1.7;
-            margin-bottom: 20px;
-        }
-        .shop-btn {
-            padding: 12px 30px;
-            border-radius: 25px;
-            background: black;
-            color: white;
-            text-decoration: none;
-            display: inline-block;
-        }
-        @media(max-width:768px){
-            .details-page {
-                flex-direction: column;
-                text-align: center;
-            }
-            .details-page img {
-                width: 300px;
-                height: 400px;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Designer Details</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.details-page{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:70px;
+    padding:70px 8%;
+    background:#faf7f5;
+}
+.details-image img{
+    width:450px;
+    height:600px;
+    object-fit:cover;
+    border-radius:25px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.15);
+}
+.details-text{
+    max-width:450px;
+    background:white;
+    padding:40px;
+    border-radius:25px;
+}
+.tag{
+    display:inline-block;
+    padding:8px 18px;
+    border-radius:20px;
+    background:#eee;
+    font-size:14px;
+    margin-bottom:15px;
+}
+.details-text h1{
+    font-size:42px;
+    margin-bottom:20px;
+}
+.details-text p{
+    color:#555;
+    line-height:1.8;
+    margin-bottom:15px;
+}
+.price{
+    font-size:25px;
+    font-weight:bold;
+    margin:20px 0;
+}
+.shop-btn{
+    display:inline-block;
+    padding:14px 35px;
+    background:black;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+}
+.related{
+    text-align:center;
+    padding:50px;
+}
+.related h2{
+    font-size:35px;
+}
+.related-box{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    margin-top:30px;
+}
+.related-box img{
+    width:200px;
+    height:250px;
+    object-fit:cover;
+    border-radius:15px;
+}
+@media(max-width:768px){
+.details-page{
+    flex-direction:column;
+}
+.details-image img{
+    width:300px;
+    height:400px;
+}
+}
+</style>
 </head>
 <body>
 <header>
-    <a href="index.html" class="logo">Fashion Studio</a>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="collections.html">Collections</a></li>
-            <li><a href="designer.html">Designer Picks</a></li>
-            <li><a href="about.html">About Us</a></li>
-        </ul>
-    </nav>
+<a href="index.html" class="logo">Fashion Studio</a>
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="designer.html">Designer Picks</a></li>
+<li><a href="about.html">About Us</a></li>
+</ul>
+</nav>
 </header>
 <section class="details-page">
-    <img id="productImage" src="" alt="Designer Dress">
-    <div class="details-text">
-        <h1 id="productTitle"></h1>
-        <p id="productDesc"></p>
-        <p>
-            Premium fashion pieces designed with elegance and creativity.
-            Perfect for weddings, events and special occasions.
-        </p>
-        <a href="#" class="shop-btn">Shop Now</a>
-    </div>
+<div class="details-image">
+<img id="productImage" src="">
+</div>
+<div class="details-text">
+<span class="tag">Premium Designer Wear</span>
+<h1 id="productTitle"></h1>
+<p id="productDesc"></p>
+<p>
+Fabric: Premium Quality Fabric<br>
+Style: Elegant & Modern Design<br>
+Perfect for: Weddings & Special Events
+</p>
+<div class="price">
+Rs. 25,000
+</div>
+<a href="#" class="shop-btn">
+Shop Now
+</a>
+</div>
+</section>
+<section class="related">
+<h2>Related Designs</h2>
+<div class="related-box">
+<img src="images/images/designer1.jpeg">
+<img src="images/images/designer2.jpeg">
+<img src="images/images/designer3.jpeg">
+</div>
 </section>
 <script>
 let params = new URLSearchParams(window.location.search);
 let item = params.get("item");
 let products = {
-    designer1:{
-        image:"images/images/designer1.jpeg",
-        title:"Luxury Collection",
-        desc:"Elegant designs for weddings and special occasions."
-    },
-    designer2:{
-        image:"images/images/designer2.jpeg",
-        title:"Modern Chic",
-        desc:"Stylish outfits with a modern fashion touch."
-    },
-    designer3:{
-        image:"images/images/designer3.jpeg",
-        title:"Premium Exclusive",
-        desc:"Limited edition pieces made with premium fabrics."
-    }
+designer1:{
+image:"images/images/designer1.jpeg",
+title:"Luxury Collection",
+desc:"Elegant designs created for weddings and special occasions."
+},
+designer2:{
+image:"images/images/designer2.jpeg",
+title:"Modern Chic",
+desc:"Stylish outfits with a modern fashion touch."
+},
+designer3:{
+image:"images/images/designer3.jpeg",
+title:"Premium Exclusive",
+desc:"Limited edition pieces made with premium fabrics."
+}
 };
 document.getElementById("productImage").src = products[item].image;
 document.getElementById("productTitle").innerHTML = products[item].title;
