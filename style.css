@@ -539,4 +539,21 @@ nav a.active {
 .hero-text {
     flex: 1;
     
-}
+}<section class="details">
+    <div class="details-image">
+        <img id="productImage" src="" alt="Designer Dress">
+    </div>
+
+    <div class="details-info">
+        <h1 id="productTitle"></h1>
+        <p id="productDesc"></p>
+
+        <h3>✨ Premium Fashion Collection</h3>
+        <p>
+            Crafted with elegant designs and high quality fabrics.
+            Perfect for weddings, events and special occasions.
+        </p>
+
+        <button class="btn">Shop Now</button>
+    </div>
+</section>
