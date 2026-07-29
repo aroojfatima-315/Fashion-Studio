@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Details</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<a href="index.html" class="logo">Fashion Studio</a>
+</header>
+
+<section class="details">
+<img id="productImage" src="" alt="Designer Dress">
+
+<h1 id="productTitle"></h1>
+<p id="productDesc"></p>
+</section>
+
+
+<script>
+let params = new URLSearchParams(window.location.search);
+let item = params.get("item");
+
+let products = {
+    designer1:{
+        image:"images/images/designer1.jpeg",
+        title:"Luxury Collection",
+        desc:"Elegant designs for weddings and special occasions."
+    },
+
+    designer2:{
+        image:"images/images/designer2.jpeg",
+        title:"Modern Chic",
+        desc:"Stylish outfits with a modern fashion touch."
+    },
+
+    designer3:{
+        image:"images/images/designer3.jpeg",
+        title:"Premium Exclusive",
+        desc:"Limited edition pieces made with premium fabrics."
+    }
+};
+
+document.getElementById("productImage").src = products[item].image;
+document.getElementById("productTitle").innerHTML = products[item].title;
+document.getElementById("productDesc").innerHTML = products[item].desc;
+
+</script>
+
+</body>
+</html>
