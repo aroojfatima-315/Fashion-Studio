@@ -1,66 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Product Details</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designer Details</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .details-page {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            padding: 80px 10%;
+        }
+        .details-page img {
+            width: 420px;
+            height: 520px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+        .details-text {
+            max-width: 450px;
+        }
+        .details-text h1 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+        .details-text p {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        .shop-btn {
+            padding: 12px 30px;
+            border-radius: 25px;
+            background: black;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+        }
+        @media(max-width:768px){
+            .details-page {
+                flex-direction: column;
+                text-align: center;
+            }
+            .details-page img {
+                width: 300px;
+                height: 400px;
+            }
+        }
+    </style>
 </head>
-
 <body>
-
 <header>
-<a href="index.html" class="logo">Fashion Studio</a>
+    <a href="index.html" class="logo">Fashion Studio</a>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="collections.html">Collections</a></li>
+            <li><a href="designer.html">Designer Picks</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
 </header>
-
-<section class="details">
-    <div class="details-image">
-        <img id="productImage" src="" alt="Designer Dress">
-    </div>
-
-    <div class="details-info">
+<section class="details-page">
+    <img id="productImage" src="" alt="Designer Dress">
+    <div class="details-text">
         <h1 id="productTitle"></h1>
         <p id="productDesc"></p>
-
-        <h3>✨ Premium Fashion Collection</h3>
         <p>
-            Crafted with elegant designs and high quality fabrics.
+            Premium fashion pieces designed with elegance and creativity.
             Perfect for weddings, events and special occasions.
         </p>
-
-        <button class="btn">Shop Now</button>
+        <a href="#" class="shop-btn">Shop Now</a>
     </div>
 </section>
-
 <script>
 let params = new URLSearchParams(window.location.search);
 let item = params.get("item");
-
 let products = {
     designer1:{
         image:"images/images/designer1.jpeg",
         title:"Luxury Collection",
         desc:"Elegant designs for weddings and special occasions."
     },
-
     designer2:{
         image:"images/images/designer2.jpeg",
         title:"Modern Chic",
         desc:"Stylish outfits with a modern fashion touch."
     },
-
     designer3:{
         image:"images/images/designer3.jpeg",
         title:"Premium Exclusive",
         desc:"Limited edition pieces made with premium fabrics."
     }
 };
-
 document.getElementById("productImage").src = products[item].image;
 document.getElementById("productTitle").innerHTML = products[item].title;
 document.getElementById("productDesc").innerHTML = products[item].desc;
-
 </script>
-
 </body>
 </html>
