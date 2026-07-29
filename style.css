@@ -573,4 +573,46 @@ nav a.active {
     display:inline-block;
     padding:12px 30px;
     border-radius:25px;
+}.details-page{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:60px;
+    padding:80px;
+    background:#faf7f5;
+}
+
+.details-image img{
+    width:450px;
+    height:600px;
+    object-fit:cover;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.details-text{
+    background:white;
+    padding:40px;
+    width:450px;
+    border-radius:25px;
+}
+
+.details-text h1{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.details-text p{
+    line-height:1.8;
+    color:#555;
+}
+
+.shop-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 35px;
+    background:black;
+    color:white;
+    border-radius:30px;
+    text-decoration:none;
 }
