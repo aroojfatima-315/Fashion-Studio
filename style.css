@@ -44,18 +44,15 @@ nav a.active {
   border-bottom: 2px solid #6d0f24;
 }
 
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 50px 8% 20px;
-  gap: 40px;
+ .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 8%;
+    gap: 40px;
 }
 
-.hero-text {
-  flex: 1;
-  max-width: 500px;
-}
+
 
 .tagline {
   font-family: 'Playfair Display', serif;
@@ -511,15 +508,24 @@ nav a.active {
 
 .logo:hover{
     color: #8b3a62;
-}.hero-image {
+}
+
+
+.hero-image {
     flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: right;
 }
 
 .hero-image img {
     width: 100%;
     max-width: 550px;
     border-radius: 20px;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 8% 20px;
+    gap: 40px;
 }
