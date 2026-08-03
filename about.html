@@ -3,13 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+
+    <title>About Us | Fashion Studio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        .about-hero {
+            text-align: center;
+            padding: 80px 8% 50px;
+        }
+
+        .about-hero span {
+            color: #6d0f24;
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+        }
+
+        .about-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 52px;
+            color: #2b1a1d;
+            margin: 12px 0 20px;
+        }
+
+        .about-hero p {
+            max-width: 700px;
+            margin: auto;
+            color: #555;
+            line-height: 1.8;
+        }
+
+
+        .about-story {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            padding: 60px 8% 90px;
+        }
+
+        .about-story-text {
+            flex: 1;
+        }
+
+        .about-story-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 38px;
+            color: #6d0f24;
+            margin-bottom: 20px;
+        }
+
+        .about-story-text p {
+            color: #555;
+            line-height: 1.9;
+            margin-bottom: 15px;
+        }
+
+        .about-story-image {
+            flex: 1;
+        }
+
+        .about-story-image img {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: 25px;
+            box-shadow: 0 15px 35px rgba(0,0,0,.12);
+        }
+
+
+        .mission {
+            background: #5b0f1d;
+            color: white;
+            text-align: center;
+            padding: 70px 8%;
+        }
+
+        .mission h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+
+        .mission p {
+            max-width: 750px;
+            margin: auto;
+            line-height: 1.8;
+            color: #f3dede;
+        }
+
+
+        .offer {
+            padding: 80px 8%;
+            text-align: center;
+        }
+
+        .offer h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 38px;
+            color: #6d0f24;
+            margin-bottom: 40px;
+        }
+
+        .offer-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .offer-card {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,.08);
+            transition: .3s ease;
+        }
+
+        .offer-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,.14);
+        }
+
+        .offer-card .icon {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .offer-card h3 {
+            color: #6d0f24;
+            margin-bottom: 12px;
+        }
+
+        .offer-card p {
+            color: #555;
+            line-height: 1.7;
+        }
+
+
+        .about-cta {
+            text-align: center;
+            padding: 70px 20px;
+            background: #f1e5df;
+        }
+
+        .about-cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: #2b1a1d;
+            margin-bottom: 15px;
+        }
+
+        .about-cta p {
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        .about-cta a {
+            display: inline-block;
+            padding: 13px 30px;
+            background: #6d0f24;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: .3s;
+        }
+
+        .about-cta a:hover {
+            transform: translateY(-3px);
+            background: #8a1430;
+        }
+
+
+        @media (max-width: 768px) {
+
+            .about-hero h1 {
+                font-size: 38px;
+            }
+
+            .about-story {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-story-text h2 {
+                font-size: 32px;
+            }
+
+            .offer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-story-image img {
+                max-height: 400px;
+            }
+        }
+
+    </style>
 </head>
+
 <body>
 
 <header>
-    <div class="logo">Fashion Studio</div>
+
+    <a href="index.html" class="logo">Fashion Studio</a>
 
     <nav>
         <ul>
@@ -20,16 +219,170 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
+
 </header>
 
-<section class="about">
+
+<!-- ABOUT HERO -->
+
+<section class="about-hero">
+
+    <span>OUR STORY</span>
+
     <h1>About Fashion Studio</h1>
+
     <p>
-        Fashion Studio is a modern fashion platform dedicated to bringing elegant,
-        stylish, and premium clothing collections to fashion lovers. Our mission is
-        to inspire confidence through unique and creative designs.
+        Fashion Studio is a modern fashion platform created for people
+        who believe that style is a way of expressing individuality,
+        confidence, and creativity.
     </p>
+
 </section>
+
+
+<!-- STORY -->
+
+<section class="about-story">
+
+    <div class="about-story-text">
+
+        <h2>Where Fashion Meets Creativity</h2>
+
+        <p>
+            We bring together timeless elegance and modern fashion trends
+            to create an inspiring digital fashion experience.
+        </p>
+
+        <p>
+            From carefully selected collections to our Designer Picks,
+            Fashion Studio helps visitors discover styles for weddings,
+            special occasions, and everyday elegance.
+        </p>
+
+        <p>
+            Our goal is simple — to make fashion discovery enjoyable,
+            inspiring, and easy for everyone.
+        </p>
+
+    </div>
+
+
+    <div class="about-story-image">
+
+        <img src="images/images/fashionmodel.jpeg"
+             alt="Fashion Studio Collection">
+
+    </div>
+
+</section>
+
+
+<!-- MISSION -->
+
+<section class="mission">
+
+    <h2>Our Mission</h2>
+
+    <p>
+        Our mission is to inspire people to explore their personal style
+        through creative designs, premium collections, and a simple
+        digital fashion experience.
+    </p>
+
+</section>
+
+
+<!-- WHAT WE OFFER -->
+
+<section class="offer">
+
+    <h2>What We Offer</h2>
+
+    <div class="offer-grid">
+
+        <div class="offer-card">
+
+            <div class="icon">👗</div>
+
+            <h3>Curated Collections</h3>
+
+            <p>
+                Explore carefully selected fashion collections
+                designed for different styles and occasions.
+            </p>
+
+        </div>
+
+
+        <div class="offer-card">
+
+            <div class="icon">✨</div>
+
+            <h3>Designer Picks</h3>
+
+            <p>
+                Discover exclusive designer-inspired pieces
+                chosen to bring elegance and creativity to your wardrobe.
+            </p>
+
+        </div>
+
+
+        <div class="offer-card">
+
+            <div class="icon">💡</div>
+
+            <h3>Style Inspiration</h3>
+
+            <p>
+                Find new ideas and fashion inspiration to help
+                you create a look that feels uniquely yours.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="about-cta">
+
+    <h2>Ready to Explore Your Style?</h2>
+
+    <p>
+        Discover our latest collections and find your next favourite look.
+    </p>
+
+    <a href="collections.html">Explore Collections</a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3>Fashion Studio</h3>
+
+    <p>Discover modern fashion with elegance and creativity.</p>
+
+    <div class="footer-links">
+
+        <a href="index.html">Home</a>
+        <a href="collections.html">Collections</a>
+        <a href="designer.html">Designer Picks</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+
+    </div>
+
+    <p>© 2026 Fashion Studio. All Rights Reserved.</p>
+
+</footer>
+
 
 </body>
 </html>
