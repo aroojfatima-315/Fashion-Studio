@@ -737,4 +737,20 @@ footer h3{
 
 .footer-links a:hover{
     color:#d4b08c;
+}#formMessage {
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#formMessage.success {
+    color: #6d0f24;
+}
+
+.contact-form button {
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    transform: translateY(-2px);
 }
