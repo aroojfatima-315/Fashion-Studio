@@ -3,8 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Designer Details</title>
+
+<title>Designer Details - Fashion Studio</title>
+
 <link rel="stylesheet" href="style.css">
+
 <style>
 .details-page{
     display:flex;
@@ -14,19 +17,23 @@
     padding:70px 8%;
     background:#faf7f5;
 }
+
 .details-image img{
     width:450px;
     height:600px;
     object-fit:cover;
     border-radius:25px;
     box-shadow:0 15px 35px rgba(0,0,0,0.15);
+    display:block;
 }
+
 .details-text{
     max-width:450px;
     background:white;
     padding:40px;
     border-radius:25px;
 }
+
 .tag{
     display:inline-block;
     padding:8px 18px;
@@ -35,122 +42,220 @@
     font-size:14px;
     margin-bottom:15px;
 }
+
 .details-text h1{
     font-size:42px;
     margin-bottom:20px;
 }
+
 .details-text p{
     color:#555;
     line-height:1.8;
     margin-bottom:15px;
 }
+
 .price{
     font-size:25px;
     font-weight:bold;
     margin:20px 0;
 }
+
 .shop-btn{
     display:inline-block;
     padding:14px 35px;
-    background:black;
+    background:#6d0f24;
     color:white;
     text-decoration:none;
     border-radius:30px;
+    transition:0.3s;
 }
+
+.shop-btn:hover{
+    background:#8a1430;
+    transform:translateY(-3px);
+}
+
 .related{
     text-align:center;
-    padding:50px;
+    padding:50px 8%;
 }
+
 .related h2{
     font-size:35px;
+    margin-bottom:30px;
+    font-family:'Playfair Display', serif;
 }
+
 .related-box{
     display:flex;
     justify-content:center;
     gap:25px;
-    margin-top:30px;
+    flex-wrap:wrap;
 }
+
 .related-box img{
     width:200px;
     height:250px;
     object-fit:cover;
     border-radius:15px;
+    transition:0.3s;
 }
+
+.related-box img:hover{
+    transform:translateY(-8px);
+}
+
 @media(max-width:768px){
-.details-page{
-    flex-direction:column;
-}
-.details-image img{
-    width:300px;
-    height:400px;
-}
+
+    .details-page{
+        flex-direction:column;
+        padding:50px 20px;
+    }
+
+    .details-image img{
+        width:300px;
+        height:400px;
+    }
+
+    .details-text{
+        width:100%;
+        padding:30px;
+    }
+
+    .details-text h1{
+        font-size:32px;
+    }
 }
 </style>
 </head>
+
 <body>
+
 <header>
+
 <a href="index.html" class="logo">Fashion Studio</a>
+
 <nav>
 <ul>
 <li><a href="index.html">Home</a></li>
 <li><a href="collections.html">Collections</a></li>
 <li><a href="designer.html">Designer Picks</a></li>
 <li><a href="about.html">About Us</a></li>
+<li><a href="contact.html">Contact</a></li>
 </ul>
 </nav>
+
 </header>
+
+
 <section class="details-page">
+
 <div class="details-image">
-<img id="productImage" src="">
+<img id="productImage" src="" alt="Designer Fashion">
 </div>
+
+
 <div class="details-text">
+
 <span class="tag">Premium Designer Wear</span>
+
 <h1 id="productTitle"></h1>
+
 <p id="productDesc"></p>
+
 <p>
 Fabric: Premium Quality Fabric<br>
 Style: Elegant & Modern Design<br>
 Perfect for: Weddings & Special Events
 </p>
+
 <div class="price">
 Rs. 25,000
 </div>
-<a href="#" class="shop-btn">
+
+<a href="contact.html" class="shop-btn">
 Shop Now
 </a>
+
 </div>
+
 </section>
+
+
 <section class="related">
+
 <h2>Related Designs</h2>
+
 <div class="related-box">
-<img src="images/images/designer1.jpeg">
-<img src="images/images/designer2.jpeg">
-<img src="images/images/designer3.jpeg">
+
+<img src="images/images/designer1.jpeg" alt="Luxury Collection">
+
+<img src="images/images/designer2.jpeg" alt="Modern Chic">
+
+<img src="images/images/designer3.jpeg" alt="Premium Exclusive">
+
 </div>
+
 </section>
+
+
 <script>
-let params = new URLSearchParams(window.location.search);
-let item = params.get("item");
-let products = {
-designer1:{
-image:"images/images/designer1.jpeg",
-title:"Luxury Collection",
-desc:"Elegant designs created for weddings and special occasions."
-},
-designer2:{
-image:"images/images/designer2.jpeg",
-title:"Modern Chic",
-desc:"Stylish outfits with a modern fashion touch."
-},
-designer3:{
-image:"images/images/designer3.jpeg",
-title:"Premium Exclusive",
-desc:"Limited edition pieces made with premium fabrics."
-}
+
+const params = new URLSearchParams(window.location.search);
+
+const item = params.get("item");
+
+
+const products = {
+
+    designer1: {
+        image: "images/images/designer1.jpeg",
+        title: "Luxury Collection",
+        desc: "Elegant designs created for weddings and special occasions."
+    },
+
+    designer2: {
+        image: "images/images/designer2.jpeg",
+        title: "Modern Chic",
+        desc: "Stylish outfits with a modern fashion touch."
+    },
+
+    designer3: {
+        image: "images/images/designer3.jpeg",
+        title: "Premium Exclusive",
+        desc: "Limited edition pieces made with premium fabrics."
+    }
+
 };
-document.getElementById("productImage").src = products[item].image;
-document.getElementById("productTitle").innerHTML = products[item].title;
-document.getElementById("productDesc").innerHTML = products[item].desc;
+
+
+/* Check whether selected product exists */
+
+if(products[item]){
+
+    document.getElementById("productImage").src = products[item].image;
+
+    document.getElementById("productTitle").textContent = products[item].title;
+
+    document.getElementById("productDesc").textContent = products[item].desc;
+
+}
+else{
+
+    /* If no product is selected, show Designer 3 instead of blank page */
+
+    document.getElementById("productImage").src =
+        "images/images/designer3.jpeg";
+
+    document.getElementById("productTitle").textContent =
+        "Premium Exclusive";
+
+    document.getElementById("productDesc").textContent =
+        "Limited edition pieces made with premium fabrics.";
+
+}
+
 </script>
+
 </body>
 </html>
