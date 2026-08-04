@@ -179,8 +179,9 @@ Perfect for: Weddings & Special Events
 Rs. 25,000
 </div>
 
-<a href="contact.html" class="shop-btn">
-Shop Now
+<button class="shop-btn" onclick="addDesignerToCart()">
+    Shop Now 🛒
+</button>
 </a>
 
 </div>
@@ -259,7 +260,37 @@ else{
     document.getElementById("productDesc").textContent =
         "Limited edition pieces made with premium fabrics.";
 
+}function addDesignerToCart() {
+
+    if (!products[item]) {
+        alert("Product not found!");
+        return;
+    }
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    let product = products[item];
+
+    let existingProduct = cart.find(
+        cartItem => cartItem.name === product.title
+    );
+
+    if (existingProduct) {
+        existingProduct.quantity++;
+    } else {
+        cart.push({
+            name: product.title,
+            price: 25000,
+            image: product.image,
+            quantity: 1
+        });
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    window.location.href = "cart.html";
 }
+
 
 </script>
 
