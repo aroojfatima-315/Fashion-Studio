@@ -17,5 +17,5 @@ function addToCart(name, price, image) {
 
     localStorage.setItem("cart", JSON.stringify(cart));
 
-    alert(name + " added to cart! 🛒");
+    window.location.href = "cart.html";
 }
