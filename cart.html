@@ -170,6 +170,27 @@ body {
         margin-left: auto;
     }
 }
+.checkout-area {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.checkout-btn {
+    padding: 14px 30px;
+    border: none;
+    border-radius: 30px;
+    background: #6d0f24;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.checkout-btn:hover {
+    background: #8a1430;
+    transform: translateY(-2px);
+}
     </style>
 </head>
 <body>
@@ -179,6 +200,11 @@ body {
         <div class="cart-total">
             Total: Rs. <span id="cart-total">0</span>
         </div>
+        <div class="checkout-area">
+    <button class="checkout-btn" onclick="checkout()">
+        Proceed to Checkout ✨
+    </button>
+</div>
         <a href="index.html" class="back-btn">Continue Shopping</a>
     </div>
     <script>
@@ -245,6 +271,19 @@ body {
             displayCart();
         }
         displayCart();
+        function checkout() {
+
+    if (cart.length === 0) {
+        alert("Your cart is empty! 🛍️");
+        return;
+    }
+
+    alert("Thank you for shopping with Fashion Studio! ✨ Your order has been placed.");
+
+    localStorage.removeItem("cart");
+
+    displayCart();
+}
     </script>
 </body>
 </html>
